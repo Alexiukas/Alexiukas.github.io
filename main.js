@@ -132,7 +132,7 @@ function hoursList (index, time, list) {
     if( index == 0){
         listItem.innerText = "Right now it is " + weather.hourly[index].temp;
     }else{
-        listItem.innerText = "At " + `${totalTime}` + ":00 will be " + weather.hourly[index].temp;
+        listItem.innerText = "At " + `${totalTime}` + ":00 will be " + weather.hourly[index].temp +"C°";
     }
 
     list.appendChild(listItem);
