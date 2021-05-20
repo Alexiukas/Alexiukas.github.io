@@ -43,7 +43,7 @@ function setCurrentForecast(evt){
 
     
     
-    let sendAPI = `http://api.openweathermap.org/data/2.5/weather?lat=${cordinates.lat}&lon=${cordinates.long}&units=metric&appid=${api.key}`
+    let sendAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${cordinates.lat}&lon=${cordinates.long}&units=metric&appid=${api.key}`
 
     fetch(sendAPI)
         .then(function (response){
@@ -84,7 +84,7 @@ function setHoursForecast(evt){
         o.remove();
     }
    
-    let sendAPI =  `http://api.openweathermap.org/data/2.5/onecall?lat=${cordinates.lat}&lon=${cordinates.long}&units=metric&appid=${api.key}`
+    let sendAPI =  `https://api.openweathermap.org/data/2.5/onecall?lat=${cordinates.lat}&lon=${cordinates.long}&units=metric&appid=${api.key}`
 
     fetch(sendAPI)
         .then(response =>{
