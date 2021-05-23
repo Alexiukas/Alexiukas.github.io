@@ -16,9 +16,6 @@ const weatherContainer = document.querySelector('.weather-info-container');
 const currentButton = document.querySelector(".current-button");
 currentButton.addEventListener('click', setCurrentForecast);
 
-const daysButton = document.querySelector(".days-button");
-daysButton.addEventListener('click', setDaysForecast);
-
 const hoursButton = document.querySelector(".hours-button");
 hoursButton.addEventListener('click', setHoursForecast);
 
@@ -113,10 +110,6 @@ function setHoursForecast(evt){
         })
 }
 
-function setDaysForecast(evt){
-    evt.preventDefault();
-
-}
 //Creates hours list elements
 
 function hoursList (index, time, list) {
