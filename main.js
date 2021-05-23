@@ -39,7 +39,6 @@ function setCurrentForecast(evt){
     }
 
     
-    
     let sendAPI = `https://api.openweathermap.org/data/2.5/weather?lat=${cordinates.lat}&lon=${cordinates.long}&units=metric&appid=${api.key}`
 
     fetch(sendAPI)
@@ -56,7 +55,6 @@ function setCurrentForecast(evt){
         })
         .then(function(){
            createCurrentForecast();
-           
             
         })
 }
@@ -75,10 +73,7 @@ function setHoursForecast(evt){
     var n = document.getElementById("weather-info-description");
     var o = document.getElementById("weather-info-icon");
     if(l){
-        l.remove();
-        m.remove();
-        n.remove();
-        o.remove();
+        l.remove(), m.remove(), n.remove(), o.remove();
     }
    
     let sendAPI =  `https://api.openweathermap.org/data/2.5/onecall?lat=${cordinates.lat}&lon=${cordinates.long}&units=metric&appid=${api.key}`
@@ -92,10 +87,6 @@ function setHoursForecast(evt){
             weather.hourly = data.hourly;
         })
         .then(x=>{
-            var l = document.getElementById("weather-info-city")
-            var m = document.getElementById("weather-info-forecast")
-            var n = document.getElementById("weather-info-description")
-
             
             var date = new Date();
             var time = date.getHours();
